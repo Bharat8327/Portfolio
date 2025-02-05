@@ -2,18 +2,18 @@ import React from 'react'
 
 function AboutSkills() {
 
-    const skill1 = [{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"}];
-    const imag = [{src:'./img/quote.svg',nmae:"quote"},{src:'./img/review.svg',nmae:"review"}]
+    const skill1 = [{src:'./img/react.webp',name:"html"},{src:'./img/javascript.webp',name:"javascript"},{src:'./img/tailwind.Default',name:"tailwind"},{src:'./img/html.svg',name:"html"},{src:'./img/css.webp',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"},{src:'./img/html.svg',name:"html"}];
+    const imag = [{src:'./img/quote.svg',name:"quote"},{src:'./img/review.svg',name:"review"}]
 
 
   return (
-    <div className="flex items-center justify-center -mt-3">
-        <div className="w-[70vw] text-white min-h-[50vh] flex gap-8 items-center justify-between rounded-2xl">
-                <div className="w-[65%] bg-[var(--main-bg)] min-h-[40vh] rounded-2xl py-10 px-12 flex flex-col gap-8">
+    <div className="flex items-center flex-wrap justify-center mt-10">
+        <div className="sm:w-[70vw] text-white min-h-[50vh] max-sm:flex-wrap w-[70%] flex gap-8 items-center justify-between rounded-2xl">
+                <div className="sm:w-[65%] w-[100%] bg-[var(--main-bg)] min-h-[40vh] rounded-2xl py-10 px-12 flex flex-col gap-8">
                 
                         <div className="flex gap-2 items-center ">
                             <span className="w-8 h-3.5 bg-red-500 inline-block rounded-full"></span>
-                            <h2 className="text-2xl font-semibold">About Me</h2>
+                            <h2 className="text-2xl font-semibold">About My Skill</h2>
                         </div>
 
                         <div className='flex gap-3 flex-wrap'>
@@ -27,18 +27,17 @@ function AboutSkills() {
                         </div>
                 </div>
 
-            <div className="w-[55%] bg-[var(--main-bg)] min-h-[40vh] rounded-2xl p-10">
+            <div className="sm:w-[55%] w-[100%] bg-[var(--main-bg)] min-h-[40vh] rounded-2xl p-10">
                     <div>
                         <div className='flex gap-5 items-end'>
                             {
                             imag.map((el,idx)=>(
-                                <div>
+                                <div key={idx}>
                                 <img src={el.src} alt={el.name} />
                                 </div>
                             ))
                         }
                         </div>
-
                         <div className='pt-3'>
                             <p>Since 1985 Reed has pioneered specialist recruitment Sourcing knowledgeable,skilled professionals pioneered Specialist
                             pioneered specialist recruitment skilled professionals</p>
@@ -47,8 +46,8 @@ function AboutSkills() {
                         <div className='pt-3 flex items-start '>
                             <img src="./img/testimonial.svg" alt="user1" />
                             <div className='flex flex-col gap-1 pl-3 text-xl font-semibold'>
-                                <h3>Tandre Flop</h3>
-                                <p className='text-sm font-'>CEO, Squaround</p>
+                                <h3>Aashish Joshi</h3>
+                                <p className='text-sm text-amber-200'>CEO, Squaround</p>
                             </div>
                         </div>
 

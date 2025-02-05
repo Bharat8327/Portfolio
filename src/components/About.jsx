@@ -15,7 +15,7 @@ function About() {
     {
       title: "PHONE:",
       src: "./img/icons/call.svg",
-      info: "+1234 567 89 0",
+      info: "+91-8345983456",
     },
     {
       title: "RESIDENCE:",
@@ -25,7 +25,7 @@ function About() {
     {
       title: "ADDRESS:",
       src: "./img/icons/save.svg",
-      info: "Jaipur",
+      info: "Jodhpur",
     },
     {
       title: "E-Mail:",
@@ -35,9 +35,9 @@ function About() {
   ];
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="w-[70vw] text-white min-h-[50vh] flex gap-8 items-center justify-between rounded-2xl">
-        <div className="w-[100%] bg-[var(--main-bg)] min-h-[40vh] rounded-2xl py-10 px-12 flex flex-col gap-8">
+    <div className="flex items-center justify-center mt-10">
+      <div className="sm:w-[70vw] w-[70%] text-white  min-h-[50vh] flex gap-8 items-center justify-between rounded-2xl max-sm:flex-wrap">
+        <div className="sm:w-[100%] bg-[var(--main-bg)] min-h-[40vh] rounded-2xl py-10 px-12 flex flex-col gap-8">
           <div className="flex gap-2 items-center">
             <span className="w-8 h-3.5 bg-gradient-to-r from-red-600 to-orange-500 inline-block rounded-full"></span>
             <h2 className="text-2xl font-semibold">About Me</h2>
@@ -52,7 +52,7 @@ function About() {
           </p>
         </div>
 
-        <div className="w-[60%] bg-[var(--main-bg)] h-[40vh] rounded-2xl flex flex-col p-10 gap-4">
+        <div className="sm:w-[60%] bg-[var(--main-bg)] h-[40vh] w-[100%] rounded-2xl flex flex-col p-10 gap-4">
           <div className="flex gap-2 items-center">
             <span className="w-8 h-3.5 bg-gradient-to-r from-red-600 to-orange-500 inline-block rounded-full"></span>
             <h2 className="text-2xl font-semibold">About Me</h2>
