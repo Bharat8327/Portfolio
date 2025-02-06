@@ -29,7 +29,7 @@ function CertificateCarousel() {
                     </div>
 
                         <div className="pt-6">
-                            <div className="flex">
+                            <div className="flex justify-between">
                                 <button className="pr-3 text-cyan-300" onClick={left} >left</button>
                                 <img
                                     className="w-260 h-140 object-cover object-fill rounded-2xl "
