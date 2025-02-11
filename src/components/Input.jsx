@@ -3,10 +3,10 @@
     import React from 'react';
     
     function Input({ htmlfor1, type, name, value, onChange, required, rounded }) {
-        const inputStyle = `bg-[#191C1F] text-white ${rounded ==true? "sm:w-185 h-60 rounded-xl ": "rounded-full mt-3 w-90  "}  p-4 hover:border-[#1f3C15]`;
+        const inputStyle = `bg-[#191C1F] text-white ${rounded ==true? "sm:w-185 h-60 rounded-xl max-sm:w-[55vw]": "rounded-full mt-3 sm:w-90  max-sm:w-[55vw]"} p-4 hover:border-[#1f3C15]`;
         return (
             <div className="flex flex-col">
-            <label  className="flex items-center gap-1" htmlFor={htmlfor1}>{name}   {required && <span className="text-red-500">*</span>}</label>
+            <label  className="flex items-center gap-1 max-sm:text-xs" htmlFor={htmlfor1}>{name}   {required && <span className="text-red-500">*</span>}</label>
             <input
                 id={htmlfor1}
                 type={type}

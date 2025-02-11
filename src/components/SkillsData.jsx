@@ -2,7 +2,7 @@ import React from "react";
 
 function SkillsData(props) {
   return (
-    <div className="bg-[var(--bg-service)] sm:min-w-[18vw] min-h-40 rounded-full relative mt-10">
+    <div className="bg-[var(--bg-service)] sm:min-w-[18vw] max-sm:w-[50vw] min-h-40 rounded-full relative mt-10">
           <div
             className={`absolute -top-5 -left-5 w-25 h-25 ${props.color} rounded-full flex items-center justify-center border-8 border-[var(--main-bg)] `}
           >

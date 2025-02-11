@@ -34,7 +34,7 @@ function Contact() {
 
   return (
     <div className="flex justify-center max-sm:w-[100%] mt-10">
-                <div className="bg-[var(--main-bg)] sm:w-[70vw] text-white min-h-[80vh] justify-center items-center flex-col gap-4 flex w-[70%] p-15 rounded-2xl">
+                <div className="bg-[var(--main-bg)] sm:w-[70vw] text-white min-h-[80vh] justify-center items-center flex-col gap-4 flex w-[70%] sm:p-15 max-sm:py-10 rounded-2xl">
                             <div className="flex flex-col items-center gap-5 ">
                                 <div className="flex items-center gap-5 ">
                                     <span className="w-8 h-3.5 bg-red-500 inline-block rounded-full"></span>
@@ -44,7 +44,7 @@ function Contact() {
 
                             
 
-                        <form className="align-center mt-2 flex flex-col" onSubmit={handleSubmit}>
+                        <form className="items-center mt-2 flex flex-col" onSubmit={handleSubmit}>
                             
                             <div className='flex mt-4 gap-4 max-sm:flex-col max-sm:items-center'> 
                                     <Input {...style[0]} value={formData.uname} onChange={handleChange}  required={true}/>

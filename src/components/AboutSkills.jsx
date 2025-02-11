@@ -11,12 +11,12 @@ function AboutSkills() {
         <div className="sm:w-[70vw] text-white min-h-[50vh] max-sm:flex-wrap w-[70%] flex gap-8 items-center justify-between rounded-2xl">
                 <div className="sm:w-[65%] w-[100%] bg-[var(--main-bg)] min-h-[40vh] rounded-2xl py-10 px-12 flex flex-col gap-8">
                 
-                        <div className="flex gap-2 items-center ">
+                        <div className="flex gap-2 items-center justify-center">
                             <span className="w-8 h-3.5 bg-red-500 inline-block rounded-full"></span>
                             <h2 className="text-2xl font-semibold">About My Skill</h2>
                         </div>
 
-                        <div className='flex gap-3 flex-wrap'>
+                        <div className='flex gap-3 flex-wrap justify-center'>
                             {
                             skill1.map((value,idx)=>{
                                return <div key ={idx} className="w-20 h-20 flex items-center justify-center rounded-full bg-white "> 
