@@ -45,7 +45,7 @@ const HireActionPerform = ()=>{
                                 <h4 className="text-base font-semibold">I AM web Developer</h4>
                             </div>
 
-                              <p className="sm:text-sm text-xs text-[var(--p-text)] font-medium">
+                              <p className="sm:text-sm text-xs text-[var(--p-text)] max-w-120 font-medium">
                               From Jodhpur, Rajasthan. I have rich experience in web design, also I
                               am good at problem Solving Skills. I love to talk with you about our unique
                               </p>
