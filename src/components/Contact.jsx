@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
 function Contact() {
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState('Send message ...');
   const noramlData = 'db925b55-8526-4580-a3be-18baedfe2d53';
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setResult('Sending....');
@@ -24,6 +25,7 @@ function Contact() {
         text: 'Message sent successfully',
         icon: 'success',
       });
+    setResult('Submit');
       event.target.reset();
     } else {
       console.log('Error', data);
@@ -31,98 +33,92 @@ function Contact() {
     }
   };
   return (
-    <div className="flex justify-center max-sm:w-[100%] mt-10">
-      <div className="bg-[var(--main-bg)] sm:w-[70vw] text-white min-h-[80vh] justify-center items-center flex-col gap-4 flex w-[70%] sm:p-15 max-sm:py-10 rounded-2xl">
-        <div className="flex flex-col items-center gap-5 ">
-          <div className="flex items-center gap-5 ">
+    <div className="flex justify-center w-full mt-6 px-2">
+      <div className="bg-[var(--main-bg)] w-full max-w-5xl text-white min-h-[80vh] flex flex-col gap-4 items-center p-6 sm:p-10 rounded-2xl">
+        <div className="flex flex-col items-center gap-5">
+          <div className="flex items-center gap-5">
             <span className="w-8 h-3.5 bg-red-500 inline-block rounded-full"></span>
-            <h1 className="text-3xl">Contact with me</h1>
+            <h1 className="text-2xl sm:text-3xl">Send mail</h1>
           </div>
         </div>
 
-        <form
-          className="items-center mt-2 flex flex-col px-3"
-          onSubmit={handleSubmit}
-        >
-          <div className="flex mt-4 gap-4 max-sm:flex-col max-sm:items-center">
-            <div>
-              <label htmlFor="name" className="items-start">
+        <form className="w-full flex flex-col gap-6" onSubmit={handleSubmit}>
+          <div className="flex flex-wrap gap-4">
+            <div className="flex-1 min-w-[250px]">
+              <label htmlFor="name" className="block">
                 Full Name<span className="text-[#FA6006]"> *</span>
               </label>
               <input
                 type="text"
                 id="name"
-                className="w-[100%] mt-2   bg-[#191C1F]  rounded-2xl outline-none px-5 py-4"
-                placeholder="Enter Your name"
+                className="w-full mt-2 bg-[#191C1F] rounded-2xl outline-none px-5 py-4"
+                placeholder="Your name"
                 name="name"
                 required
               />
             </div>
-            <div>
-              <label htmlFor="email">
-                Email<span className="text-[#FA6006]"> *</span>{' '}
+            <div className="flex-1 min-w-[250px]">
+              <label htmlFor="email" className="block">
+                Email<span className="text-[#FA6006]"> *</span>
               </label>
               <input
-                className="w-[100%] mt-2 bg-[#191C1F]  rounded-2xl outline-none px-5 py-4"
+                className="w-full mt-2 bg-[#191C1F] rounded-2xl outline-none px-5 py-4"
                 type="email"
                 id="email"
-                placeholder="Enter Your Email"
+                placeholder="Email adress"
                 name="email"
                 required
               />
             </div>
           </div>
-          <div className=" flex mt-4 gap-4 max-sm:flex-col max-sm:items-center">
-            <div>
-              <label htmlFor="mobile">
+          <div className="flex flex-wrap gap-4">
+            <div className="flex-1 min-w-[250px]">
+              <label htmlFor="mobile" className="block">
                 Mobile No<span className="text-[#FA6006]"> *</span>
               </label>
               <input
-                className="w-[100%] mt-2  bg-[#191C1F]  rounded-2xl outline-none px-5 py-4"
+                className="w-full mt-2 bg-[#191C1F] rounded-2xl outline-none px-5 py-4"
                 type="tel"
                 id="mobile"
                 minLength="10"
                 maxLength="10"
-                placeholder="Enter Your mobile no"
+                placeholder="Phone Number"
                 name="number"
                 required
               />
             </div>
-            <div>
-              <label htmlFor="subject">
+            <div className="flex-1 min-w-[250px]">
+              <label htmlFor="subject" className="block">
                 Subject<span className="text-[#FA6006]"> *</span>
               </label>
               <input
-                className="w-[100%] mt-2  bg-[#191C1F]  rounded-2xl outline-none px-5 py-4"
-                type="subject"
+                className="w-full mt-2 bg-[#191C1F] rounded-2xl outline-none px-5 py-4"
+                type="text"
                 id="subject"
-                placeholder="Enter your subject"
+                placeholder="Subject"
                 name="subject"
                 required
               />
             </div>
           </div>
-          <div className="mt-2 w-full">
-            <div>
-              <label htmlFor="msg">
-                Your Message<span className="text-[#FA6006]"> *</span>
-              </label>
-              <textarea
-                className="w-[100%] mt-2 transform outline-none min-h-50  bg-[#191C1F]    rounded-2xl px-5 py-4"
-                type="text"
-                id="msg"
-                required
-                placeholder="enter your mssg"
-                name="message"
-              ></textarea>
-            </div>
+          <div className="w-full">
+            <label htmlFor="msg" className="block">
+              Your Message<span className="text-[#FA6006]"> *</span>
+            </label>
+            <textarea
+              className="w-full mt-2 bg-[#191C1F] rounded-2xl outline-none px-5 py-4 min-h-[100px]"
+              id="msg"
+              required
+              placeholder="Message....."
+              name="message"
+            ></textarea>
           </div>
-          <div
-            className="w-full text-center mt-2 bg-[#FA6006] rounded-full mx-auto max-sm:w-[100%] active:bg-amber-600 "
-            onSubmit={handleSubmit}
-          >
-            <button className="p-3  w-full text-lg font-bold " type="submit">
-              Submit
+          <div className="w-full">
+            <button
+              className="w-full p-3 text-lg font-bold cursor-pointer bg-[#FA6006] rounded-full active:bg-amber-600"
+              type="submit"
+            >
+              {result}
             </button>
           </div>
         </form>
