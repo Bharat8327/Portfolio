@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Project from './components/Project';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import Footer from './components/Footer';
+import AnimatedName from './components/AnimatedName';
 
 function App() {
   return (

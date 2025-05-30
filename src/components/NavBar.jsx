@@ -11,9 +11,9 @@ function NavBar() {
   };
 
   return (
-    <div className="flex justify-between sm:w-[78vw] items-center h-12 bg-[var(--main-bg)] rounded-br-full rounded-tl-full mt-3 mx-auto px-15 text-[16px] text-white">
+    <div className="flex justify-between sm:w-[78vw]  items-center h-12 bg-[var(--main-bg)]  bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 via-red-500 via-orange-500  via-green-500 to-blue-500 rounded-br-full rounded-tl-full mt-3 mx-auto px-15 text-[16px] text-white">
       <div>
-        <h1>Bharat</h1>
+        <h1 className='animate-bounce'>Bharat</h1>
       </div>
       <ul className="hidden md:flex gap-10 text-sm cursor-pointer">
         {header.map((el, idx) => (

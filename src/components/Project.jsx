@@ -1,24 +1,23 @@
 // src/components/Project.jsx
 import React, { useState } from 'react';
-import img1 from '../../public/img/project1.png';
-import img2 from '../../public/img/crypto.jpg';
+import img1 from '../../public/img/ProjectImg/Pixify.png';
+import img2 from '../../public/img/ProjectImg/WeatherWave.png';
 import img3 from '../../public/img/contact-form.webp';
 const projects = [
   {
     id: 1,
-    title: 'Social Media',
+    title: 'Pixify',
     description:
       'Social Media is a collection of online platforms that enable users to create, share, and interact with content in real-time.',
     image: img1,
-    link: '',
+    link: 'https://fronted-dev.onrender.com/',
   },
   {
     id: 2,
-    title: 'Crypto Convertor',
-    description:
-      'his crypto converter app allows users to convert between two selected cryptocurrencies using real-time exchange rates from the CoinGecko API.',
+    title: 'WeatherWave',
+    description:'🌤️ WeatherWave –  A simple weather app that lets users search any city to view real-time temperature and weather details using a clean, user-friendly interface.', 
     image: img2,
-    link: 'https://patell-crypto-converter.netlify.app/',
+    link: 'https://weatherwave1.onrender.com/',
   },
   {
     id: 3,
@@ -46,7 +45,7 @@ const Project = () => {
         <div className="w-full bg-[var(--main-bg)] min-h-[40vh] rounded-2xl py-10 px-12 flex flex-col gap-8">
           <div className="flex gap-2 items-center justify-center">
             <span className="w-8 h-3.5 bg-red-500 inline-block rounded-full"></span>
-            <h2 className="text-2xl font-semibold">My Projects</h2>
+            <h2 className="text-2xl font-semibold">Projects</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
